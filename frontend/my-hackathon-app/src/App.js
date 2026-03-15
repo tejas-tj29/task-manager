@@ -8,24 +8,24 @@ function App() {
   const [filter, setFilter] = useState('All');
 
   useEffect(() => {
-    axios.get('http://localhost:5555/api/tasks')
+    axios.get('https://task-manager-un0z.onrender.com/api/tasks')
       .then(res => setTasks(res.data))
       .catch(err => console.log(err));
   }, []);
 
   const addTask = () => {
     if (!form.title || !form.assignedTo) return alert('Please fill all fields!');
-    axios.post('http://localhost:5555/api/tasks', form)
+    axios.post('https://task-manager-un0z.onrender.com/api/tasks', form)
       .then(res => setTasks([...tasks, res.data]));
   };
 
   const deleteTask = (id) => {
-    axios.delete(`http://localhost:5555/api/tasks/${id}`)
+    axios.delete(`https://task-manager-un0z.onrender.com/api/tasks/${id}`)
       .then(() => setTasks(tasks.filter(t => t._id !== id)));
   };
 
   const updateStatus = (id, status) => {
-    axios.put(`http://localhost:5555/api/tasks/${id}`, { status })
+    axios.put(`https://task-manager-un0z.onrender.com/api/tasks/${id}`, { status })
       .then(res => setTasks(tasks.map(t => t._id === id ? res.data : t)));
   };
 
