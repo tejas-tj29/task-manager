@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f0f2f5;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* NAVBAR */
+.navbar {
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  color: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+.navbar h1 {
+  font-size: 28px;
+}
+
+.navbar p {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-top: 4px;
+}
+
+/* DASHBOARD */
+.dashboard {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.card {
+  flex: 1;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+
+.card h2 {
+  font-size: 36px;
+}
+
+.card p {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.total    { background: #2c3e50; }
+.pending  { background: #e67e22; }
+.progress { background: #3498db; }
+.done     { background: #27ae60; }
+
+/* FORM */
+.form-box {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.form-box h2 {
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.form-row input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  min-width: 150px;
+}
+
+.add-btn {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.add-btn:hover {
+  background: #2980b9;
+}
+
+/* FILTERS */
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.filter-btn {
+  padding: 8px 18px;
+  border: 2px solid #3498db;
+  background: white;
+  color: #3498db;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.filter-btn.active {
+  background: #3498db;
+  color: white;
+}
+
+/* TABLE */
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.task-table th {
+  background: #2c3e50;
+  color: white;
+  padding: 14px;
+  text-align: left;
+}
+
+.task-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.task-table tr:hover {
+  background: #f9f9f9;
+}
+
+/* STATUS DROPDOWN */
+.status {
+  padding: 6px 10px;
+  border-radius: 20px;
+  border: none;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.status.Pending {
+  background: #fdebd0;
+  color: #e67e22;
+}
+
+.status.In-Progress {
+  background: #d6eaf8;
+  color: #3498db;
+}
+
+.status.Done {
+  background: #d5f5e3;
+  color: #27ae60;
+}
+
+/* DELETE BUTTON */
+.delete-btn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.delete-btn:hover {
+  background: #c0392b;
+}
